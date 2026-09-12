@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=index.html">
-    <title>Opening Pranavi's Birthday Page</title>
+    <title>Redirecting...</title>
+    <!-- Fallback for users with JavaScript disabled -->
+    <noscript>
+        <meta http-equiv="refresh" content="2; url=index.html">
+    </noscript>
+    <script>
+        // Replace location to keep browser history clean
+        window.location.replace("index.html");
+    </script>
 </head>
 <body>
-    <p><a href="index.html">Open Pranavi's birthday page</a></p>
+    <p>Redirecting you to <a href="index.html">Pranavi's birthday page</a>...</p>
 </body>
 </html>

@@ -80,6 +80,7 @@ main,
     animation: fadeIn 1s ease both;
 }
 
+/* FIX 1: Corrected image filename syntax (.png.png -> .png) */
 .hero::after {
     content: "";
     position: absolute;
@@ -87,7 +88,7 @@ main,
     bottom: 2rem;
     width: min(32vw, 230px);
     aspect-ratio: 1;
-    background: url("images/glow-flower.png.png") center / contain no-repeat;
+    background: url("images/photo1.png") center / contain no-repeat;
     opacity: 0.34;
     transform: rotate(12deg);
 }
@@ -268,17 +269,9 @@ main {
     outline: none;
 }
 
-.tilt-left {
-    transform: rotate(-2deg);
-}
-
-.tilt-right {
-    transform: rotate(1.6deg);
-}
-
-.tilt-soft {
-    transform: rotate(-1deg);
-}
+.tilt-left { transform: rotate(-2deg); }
+.tilt-right { transform: rotate(1.6deg); }
+.tilt-soft { transform: rotate(-1deg); }
 
 .polaroid-image {
     width: 100%;
@@ -320,7 +313,9 @@ main {
     animation: pulse 1.6s ease-in-out infinite;
 }
 
+/* FIX 2: Ensure overlay disappears completely on mobile browsers */
 .polaroid.revealed .polaroid-overlay {
+    display: none;
     visibility: hidden;
     opacity: 0;
     animation: none;
@@ -479,6 +474,11 @@ main {
     transform: rotateX(180deg);
 }
 
+/* FIX 3: Prevent mirrored letter text when envelope opens */
+.envelope-back .letter-content {
+    transform: rotateX(180deg);
+}
+
 .letter-content {
     display: grid;
     max-width: 620px;
@@ -532,6 +532,7 @@ main {
     transform: rotate(45deg);
 }
 
+/* FIX 4: Correct base transform for smooth centered animation start */
 .birthday-banner {
     position: absolute;
     top: 14%;
@@ -545,6 +546,7 @@ main {
     font-size: clamp(2rem, 6vw, 3.2rem);
     white-space: nowrap;
     box-shadow: var(--shadow);
+    transform: translateX(-50%);
     transform-origin: top center;
     animation: swing 2s ease-in-out infinite;
 }
@@ -679,14 +681,8 @@ main {
         opacity: 0.25;
     }
 
-    .sticker-one {
-        left: 0;
-    }
-
-    .sticker-two {
-        right: 0;
-    }
-
+    .sticker-one { left: 0; }
+    .sticker-two { right: 0; }
     .sticker-three {
         left: 3%;
         bottom: 13%;

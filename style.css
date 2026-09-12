@@ -330,76 +330,25 @@ main {
     font-size: 2.1rem;
 }
 
-/* ENVELOPE INTERACTION & REVEAL CSS */
+/* DIRECT LETTER CARD STYLING */
 .letter-section {
     text-align: center;
 }
 
-.envelope {
+.letter-card {
     width: min(100%, 760px);
     margin: 0 auto;
-    min-height: 32rem;
-    perspective: 1000px;
-    cursor: pointer;
-    outline: none;
-}
-
-.envelope-container {
-    position: relative;
-    width: 100%;
-    min-height: 32rem;
-    transform-style: preserve-3d;
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* 3D Flip Action */
-.envelope.open .envelope-container {
-    transform: rotateY(180deg);
-}
-
-.envelope-face {
-    position: absolute;
-    inset: 0;
-    display: grid;
-    place-items: center;
-    min-height: 32rem;
-    padding: clamp(1.4rem, 4vw, 2.4rem);
+    padding: clamp(1.8rem, 5vw, 3rem);
     border: 2px solid rgba(255, 255, 255, 0.78);
     border-radius: 12px;
-    box-shadow: var(--shadow);
-    backface-visibility: hidden;
-}
-
-.envelope-front {
-    background: linear-gradient(135deg, var(--peach), var(--pink));
-}
-
-.mail-icon {
-    font-size: clamp(4rem, 14vw, 7rem);
-}
-
-.front-title {
-    color: #704678;
-    font-family: var(--cursive);
-    font-size: clamp(2.2rem, 7vw, 4.2rem);
-}
-
-.front-note {
-    color: #684f68;
-    font-family: var(--hand);
-    font-size: clamp(1.25rem, 3vw, 1.65rem);
-    font-weight: 700;
-}
-
-/* Backface displaying the letter content */
-.envelope-back {
     background: var(--paper);
-    transform: rotateY(180deg);
+    box-shadow: var(--shadow);
 }
 
 .letter-content {
     display: grid;
     max-width: 620px;
+    margin: 0 auto;
     gap: 1rem;
     color: #4f454f;
     font-size: clamp(0.95rem, 2.4vw, 1.05rem);
@@ -491,5 +440,4 @@ main {
 
 @media (max-width: 820px) {
     .polaroid-grid, .interest-grid { grid-template-columns: 1fr; }
-    .envelope, .envelope-container, .envelope-face { min-height: 36rem; }
 }

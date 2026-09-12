@@ -1,12 +1,16 @@
 const celebrationContainer = document.getElementById("celebrationContainer");
-const envelope = document.getElementById("envelope");
 const polaroids = document.querySelectorAll(".polaroid");
 
 let isCelebrating = false;
 
-// 1. Polaroid interactive toggle
+// Polaroid interactive toggle & celebration trigger
 polaroids.forEach((polaroid) => {
-    const togglePolaroid = () => polaroid.classList.toggle("revealed");
+    const togglePolaroid = () => {
+        polaroid.classList.toggle("revealed");
+        if (!isCelebrating) {
+            createCelebration();
+        }
+    };
     
     polaroid.addEventListener("click", togglePolaroid);
     polaroid.addEventListener("keydown", (e) => {
@@ -17,28 +21,7 @@ polaroids.forEach((polaroid) => {
     });
 });
 
-// 2. Envelope flip toggle & reveal logic
-if (envelope) {
-    const toggleEnvelope = () => {
-        const isOpen = envelope.classList.toggle("open");
-        envelope.setAttribute("aria-expanded", String(isOpen));
-
-        // Trigger balloon animation when opening
-        if (isOpen && !isCelebrating) {
-            createCelebration();
-        }
-    };
-
-    envelope.addEventListener("click", toggleEnvelope);
-    envelope.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            toggleEnvelope();
-        }
-    });
-}
-
-// 3. Celebration balloons sequence
+// Celebration balloons sequence
 function createCelebration() {
     if (!celebrationContainer) return;
 

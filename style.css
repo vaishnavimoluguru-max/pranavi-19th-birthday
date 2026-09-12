@@ -7,7 +7,7 @@
     --gold: #daa520;
     --ink: #2d2d2d;
     --soft-ink: #666666;
-    --paper: rgba(255, 250, 247, 0.88);
+    --paper: rgba(255, 250, 247, 0.95);
     --shadow: 0 18px 45px rgba(95, 74, 94, 0.16);
     --cursive: "Great Vibes", cursive;
     --hand: "Caveat", cursive;
@@ -36,10 +36,7 @@ body {
     overflow-x: hidden;
 }
 
-button,
-input,
-textarea,
-select {
+button, input, textarea, select {
     font: inherit;
 }
 
@@ -64,9 +61,7 @@ img {
     background-size: 34px 34px;
 }
 
-.hero,
-main,
-.closing {
+.hero, main, .closing {
     width: min(100% - 2rem, 960px);
     margin-inline: auto;
 }
@@ -80,7 +75,6 @@ main,
     animation: fadeIn 1s ease both;
 }
 
-/* FIX 1: Corrected image filename syntax (.png.png -> .png) */
 .hero::after {
     content: "";
     position: absolute;
@@ -116,10 +110,7 @@ main,
     box-shadow: 0 8px 20px rgba(218, 165, 32, 0.12);
 }
 
-h1,
-h2,
-h3,
-p {
+h1, h2, h3, p {
     margin-top: 0;
 }
 
@@ -157,22 +148,9 @@ h1 {
     animation: float 3s ease-in-out infinite;
 }
 
-.sticker-one {
-    top: 19%;
-    left: 5%;
-}
-
-.sticker-two {
-    top: 13%;
-    right: 6%;
-    animation-delay: 0.35s;
-}
-
-.sticker-three {
-    bottom: 20%;
-    left: 11%;
-    animation-delay: 0.7s;
-}
+.sticker-one { top: 19%; left: 5%; }
+.sticker-two { top: 13%; right: 6%; animation-delay: 0.35s; }
+.sticker-three { bottom: 20%; left: 11%; animation-delay: 0.7s; }
 
 main {
     display: grid;
@@ -184,15 +162,6 @@ main {
     animation: slideUp 0.8s ease both;
 }
 
-.reveal-block:nth-child(1) { animation-delay: 0.1s; }
-.reveal-block:nth-child(2) { animation-delay: 0.2s; }
-.reveal-block:nth-child(3) { animation-delay: 0.3s; }
-.reveal-block:nth-child(4) { animation-delay: 0.4s; }
-.reveal-block:nth-child(5) { animation-delay: 0.5s; }
-.reveal-block:nth-child(6) { animation-delay: 0.6s; }
-.reveal-block:nth-child(7) { animation-delay: 0.7s; }
-.reveal-block:nth-child(8) { animation-delay: 0.8s; }
-
 .quote-section {
     padding: clamp(1.5rem, 5vw, 2.4rem);
     border: 2px solid rgba(255, 255, 255, 0.68);
@@ -202,13 +171,8 @@ main {
     text-align: center;
 }
 
-.quote-section.mint {
-    background: linear-gradient(135deg, rgba(200, 230, 225, 0.95), rgba(255, 212, 180, 0.7));
-}
-
-.quote-section.gold {
-    background: linear-gradient(135deg, rgba(255, 212, 180, 0.9), rgba(255, 250, 247, 0.86));
-}
+.quote-section.mint { background: linear-gradient(135deg, rgba(200, 230, 225, 0.95), rgba(255, 212, 180, 0.7)); }
+.quote-section.gold { background: linear-gradient(135deg, rgba(255, 212, 180, 0.9), rgba(255, 250, 247, 0.86)); }
 
 .quote-mark {
     margin-bottom: 0.45rem;
@@ -219,8 +183,7 @@ main {
     line-height: 1.1;
 }
 
-.quote-credit,
-.section-heading p {
+.quote-credit, .section-heading p {
     margin-bottom: 0;
     color: var(--soft-ink);
     font-family: var(--hand);
@@ -255,17 +218,16 @@ main {
     grid-template-rows: 1fr auto;
     min-height: 19rem;
     padding: 0.8rem 0.8rem 1rem;
-    border: 0;
     border-radius: 6px;
     background: #fff;
     box-shadow: 0 16px 38px rgba(81, 61, 81, 0.18);
+    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.polaroid:hover,
-.polaroid:focus-visible {
+.polaroid:hover, .polaroid:focus-visible {
     box-shadow: 0 24px 48px rgba(81, 61, 81, 0.24);
-    transform: translateY(-8px) rotate(0deg) scale(1.02);
+    transform: translateY(-8px) scale(1.02);
     outline: none;
 }
 
@@ -278,18 +240,15 @@ main {
     height: 15rem;
     border-radius: 4px;
     object-fit: cover;
-    filter: saturate(0.96) contrast(0.98);
 }
 
 .polaroid-label {
     display: block;
-    min-height: 2.8rem;
     padding-top: 0.7rem;
     color: #5d4a5e;
     font-family: var(--hand);
     font-size: 1.45rem;
     font-weight: 700;
-    line-height: 1.05;
     text-align: center;
 }
 
@@ -300,25 +259,19 @@ main {
     display: grid;
     place-items: center;
     border-radius: 4px;
-    background:
-        linear-gradient(135deg, rgba(232, 213, 242, 0.72), rgba(255, 199, 217, 0.72)),
-        rgba(255, 255, 255, 0.35);
+    background: linear-gradient(135deg, rgba(232, 213, 242, 0.72), rgba(255, 199, 217, 0.72));
     color: #65426d;
     font-family: var(--hand);
     font-size: clamp(1.7rem, 5vw, 2.2rem);
     font-weight: 700;
-    opacity: 1;
     backdrop-filter: blur(9px);
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-    animation: pulse 1.6s ease-in-out infinite;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
-/* FIX 2: Ensure overlay disappears completely on mobile browsers */
 .polaroid.revealed .polaroid-overlay {
     display: none;
     visibility: hidden;
     opacity: 0;
-    animation: none;
 }
 
 .floating-notes {
@@ -340,10 +293,6 @@ main {
     animation: float 3s ease-in-out infinite;
 }
 
-.floating-notes span:nth-child(2) { animation-delay: 0.35s; }
-.floating-notes span:nth-child(3) { animation-delay: 0.7s; }
-.floating-notes span:nth-child(4) { animation-delay: 1.05s; }
-
 .interest-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -351,18 +300,11 @@ main {
 }
 
 .interest-card {
-    min-height: 14.5rem;
     padding: 1.35rem;
     border-left: 6px solid var(--pink);
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.72);
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.interest-card:hover {
-    box-shadow: 0 24px 48px rgba(81, 61, 81, 0.2);
-    transform: translateY(-8px);
 }
 
 .interest-card.music { border-left-color: var(--lavender); }
@@ -386,40 +328,33 @@ main {
     color: #704678;
     font-family: var(--cursive);
     font-size: 2.1rem;
-    font-weight: 400;
-    line-height: 1;
 }
 
-.interest-card p {
-    margin-bottom: 0;
-    color: #555;
-    font-size: 0.95rem;
-}
-
+/* ENVELOPE INTERACTION & REVEAL CSS */
 .letter-section {
     text-align: center;
 }
 
 .envelope {
     width: min(100%, 760px);
+    margin: 0 auto;
     min-height: 32rem;
-    padding: 0;
-    border: 0;
-    background: transparent;
     perspective: 1000px;
+    cursor: pointer;
+    outline: none;
 }
 
 .envelope-container {
     position: relative;
-    display: block;
     width: 100%;
     min-height: 32rem;
     transform-style: preserve-3d;
-    transition: transform 0.8s ease;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* 3D Flip Action */
 .envelope.open .envelope-container {
-    transform: rotateX(180deg);
+    transform: rotateY(180deg);
 }
 
 .envelope-face {
@@ -430,36 +365,23 @@ main {
     min-height: 32rem;
     padding: clamp(1.4rem, 4vw, 2.4rem);
     border: 2px solid rgba(255, 255, 255, 0.78);
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: var(--shadow);
     backface-visibility: hidden;
 }
 
 .envelope-front {
-    overflow: hidden;
-    background:
-        linear-gradient(145deg, transparent 49%, rgba(255, 255, 255, 0.32) 50%, transparent 51%),
-        linear-gradient(35deg, transparent 49%, rgba(255, 255, 255, 0.28) 50%, transparent 51%),
-        linear-gradient(135deg, var(--peach), var(--pink));
+    background: linear-gradient(135deg, var(--peach), var(--pink));
 }
 
 .mail-icon {
-    display: block;
     font-size: clamp(4rem, 14vw, 7rem);
-    line-height: 1;
-    filter: drop-shadow(0 12px 12px rgba(95, 74, 94, 0.14));
-}
-
-.front-title,
-.front-note {
-    display: block;
 }
 
 .front-title {
     color: #704678;
     font-family: var(--cursive);
     font-size: clamp(2.2rem, 7vw, 4.2rem);
-    line-height: 1;
 }
 
 .front-note {
@@ -469,14 +391,10 @@ main {
     font-weight: 700;
 }
 
+/* Backface displaying the letter content */
 .envelope-back {
     background: var(--paper);
-    transform: rotateX(180deg);
-}
-
-/* FIX 3: Prevent mirrored letter text when envelope opens */
-.envelope-back .letter-content {
-    transform: rotateX(180deg);
+    transform: rotateY(180deg);
 }
 
 .letter-content {
@@ -489,12 +407,10 @@ main {
     text-align: left;
 }
 
-.letter-salute,
-.signature {
+.letter-salute, .signature {
     color: #704678;
     font-family: var(--poetry);
     font-size: clamp(1.75rem, 5vw, 2.3rem);
-    line-height: 1.15;
 }
 
 .signature {
@@ -516,23 +432,10 @@ main {
     width: 2.15rem;
     height: 2.9rem;
     border-radius: 50% 50% 50% 0;
-    box-shadow: inset -7px -8px 0 rgba(0, 0, 0, 0.08);
     transform: rotate(-45deg);
     animation: float-up 4s ease-in forwards;
 }
 
-.balloon::after {
-    content: "";
-    position: absolute;
-    left: 48%;
-    top: 2.6rem;
-    width: 1px;
-    height: 3.2rem;
-    background: rgba(45, 45, 45, 0.28);
-    transform: rotate(45deg);
-}
-
-/* FIX 4: Correct base transform for smooth centered animation start */
 .birthday-banner {
     position: absolute;
     top: 14%;
@@ -544,10 +447,7 @@ main {
     color: #704678;
     font-family: var(--cursive);
     font-size: clamp(2rem, 6vw, 3.2rem);
-    white-space: nowrap;
-    box-shadow: var(--shadow);
     transform: translateX(-50%);
-    transform-origin: top center;
     animation: swing 2s ease-in-out infinite;
 }
 
@@ -562,13 +462,6 @@ main {
     color: #704678;
     font-family: var(--poetry);
     font-size: clamp(2rem, 6vw, 3.1rem);
-    line-height: 1.14;
-}
-
-.closing p:last-child {
-    max-width: 620px;
-    margin: 0 auto;
-    color: var(--soft-ink);
 }
 
 @keyframes fadeIn {
@@ -577,14 +470,8 @@ main {
 }
 
 @keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(22px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes float {
@@ -592,129 +479,17 @@ main {
     50% { transform: translateY(-15px); }
 }
 
-@keyframes pulse {
-    0%, 100% { opacity: 0.64; }
-    50% { opacity: 1; }
-}
-
 @keyframes float-up {
-    0% {
-        bottom: -4rem;
-        opacity: 1;
-        transform: translateX(0) rotate(-45deg);
-    }
-    100% {
-        bottom: 100vh;
-        opacity: 0;
-        transform: translateX(100px) rotate(-45deg);
-    }
+    0% { bottom: -4rem; opacity: 1; }
+    100% { bottom: 100vh; opacity: 0; }
 }
 
 @keyframes swing {
-    0%, 100% {
-        opacity: 1;
-        transform: translateX(-50%) rotate(-5deg);
-    }
-    50% {
-        transform: translateX(-50%) rotate(5deg);
-    }
-}
-
-@media (min-width: 1120px) {
-    .hero,
-    main,
-    .closing {
-        width: min(100% - 2rem, 1080px);
-    }
-
-    .interest-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
+    0%, 100% { transform: translateX(-50%) rotate(-5deg); }
+    50% { transform: translateX(-50%) rotate(5deg); }
 }
 
 @media (max-width: 820px) {
-    .hero {
-        min-height: 86vh;
-        padding-top: 3.5rem;
-    }
-
-    .sticker {
-        width: 3.5rem;
-        font-size: 1.6rem;
-    }
-
-    .polaroid-grid,
-    .interest-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .polaroid {
-        width: min(100%, 22rem);
-        min-height: 18rem;
-        margin-inline: auto;
-    }
-
-    .polaroid-image {
-        height: 14rem;
-    }
-
-    .interest-card {
-        min-height: auto;
-    }
-
-    .envelope,
-    .envelope-container,
-    .envelope-face {
-        min-height: 35rem;
-    }
-}
-
-@media (max-width: 520px) {
-    .hero,
-    main,
-    .closing {
-        width: min(100% - 1.1rem, 960px);
-    }
-
-    .hero::after {
-        width: 8rem;
-        opacity: 0.25;
-    }
-
-    .sticker-one { left: 0; }
-    .sticker-two { right: 0; }
-    .sticker-three {
-        left: 3%;
-        bottom: 13%;
-    }
-
-    .quote-section {
-        padding-inline: 1rem;
-    }
-
-    .floating-notes span {
-        width: 3.1rem;
-        font-size: 1.45rem;
-    }
-
-    .envelope,
-    .envelope-container,
-    .envelope-face {
-        min-height: 39rem;
-    }
-
-    .letter-content {
-        line-height: 1.62;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
+    .polaroid-grid, .interest-grid { grid-template-columns: 1fr; }
+    .envelope, .envelope-container, .envelope-face { min-height: 36rem; }
 }

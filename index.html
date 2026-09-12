@@ -38,25 +38,24 @@
                 <h2 id="galleryTitle">Our Softest Memories</h2>
             </div>
 
-            
             <div class="polaroid-grid">
-                <button class="polaroid tilt-left" type="button" aria-label="Reveal first memory">
+                <div class="polaroid tilt-left" role="region" aria-label="First memory polaroid">
                     <span class="polaroid-overlay">👆 Click!</span>
                     <img src="images/photo1.jpeg" alt="Pranavi and her friend smiling together in a cafe" class="polaroid-image">
                     <span class="polaroid-label">Us, Forever 💜</span>
-                </button>
+                </div>
 
-                <button class="polaroid tilt-right" type="button" aria-label="Reveal second memory">
+                <div class="polaroid tilt-right" role="region" aria-label="Second memory polaroid">
                     <span class="polaroid-overlay">tap me ✨</span>
                     <img src="images/photo2.jpeg" alt="Pranavi and her friend taking a mirror selfie" class="polaroid-image">
                     <span class="polaroid-label">Our giggle archive</span>
-                </button>
+                </div>
 
-                <button class="polaroid tilt-soft" type="button" aria-label="Reveal third memory">
+                <div class="polaroid tilt-soft" role="region" aria-label="Third memory polaroid">
                     <span class="polaroid-overlay">open this 💕</span>
                     <img src="images/photo3.jpeg" alt="Pranavi and her friend sitting together and smiling" class="polaroid-image">
                     <span class="polaroid-label">Pretty days with you</span>
-                </button>
+                </div>
             </div>
         </section>
 
@@ -101,7 +100,7 @@
         </section>
 
         <section class="quote-section mint reveal-block">
-            <p class="quote-mark">"I know everybody changes, but I hope that we don't. (From "U + Me = <3" / SOUR unreleased vibes"</p>
+            <p class="quote-mark">"I know everybody changes, but I hope that we don't." (From "U + Me = &lt;3" / SOUR unreleased vibes)</p>
             <p class="quote-credit">For every version of you I have been lucky to know</p>
         </section>
 
@@ -111,29 +110,25 @@
                 <h2 id="letterTitle">A Letter For You</h2>
             </div>
 
-            <button class="envelope" id="envelope" type="button" aria-expanded="false">
-                <span class="envelope-container">
-                    <span class="envelope-face envelope-front">
-                        <span class="mail-icon" aria-hidden="true">💌</span>
-                        <span class="front-title">Click to open your letter</span>
-                        <span class="front-note">there is a whole lot of love tucked inside</span>
-                    </span>
+            <div class="envelope" id="envelope">
+                <button class="envelope-toggle" type="button" aria-expanded="false" aria-controls="letterContent">
+                    <span class="mail-icon" aria-hidden="true">💌</span>
+                    <span class="front-title">Click to open your letter</span>
+                    <span class="front-note">there is a whole lot of love tucked inside</span>
+                </button>
 
-                    <span class="envelope-face envelope-back">
-                        <span class="letter-content">
-                            <span class="letter-salute">Dear Pranavi,</span>
-                            <span>Happy 19th Birthday! 🌸🎶 As you step into Track 19 (Your Version), I wanted to take a moment to tell you how deeply grateful I am to have you in my life. You are the kind of friend people pray for—the kind who makes the world brighter, warmer, and so much more gentle just by being in it. Whether you are strumming a chord on your ukulele, carefully stitching love into every crochet project, or throwing down a strategic Wild card in UNO, you bring a quiet magic to every moment. You carry yourself with a grace that inspires me every single day to be braver, kinder, and more loving.</span>
-                            <span>They say it's nice to have a friend, but having you in my life is so much more than I could ever ask for. I truly pray that God blesses everyone with a friend as incredible as you, but I am endlessly thankful that I get to call you mine.</span>
-                            <span>I hope this 19th year brings you all the peace, joy, and beautiful memories you deserve. Never stop playing your own music, creating beautiful things, and being the extraordinary person you are.</span>
-                            <span class="signature">With all my love,<br>Yours, Vaishnavi</span>
-                        </span>
-                    </span>
-                </span>
-            </button>
+                <div class="letter-content" id="letterContent">
+                    <p class="letter-salute">Dear Pranavi,</p>
+                    <p>Happy 19th Birthday! 🌸🎶 As you step into Track 19 (Your Version), I wanted to take a moment to tell you how deeply grateful I am to have you in my life. You are the kind of friend people pray for—the kind who makes the world brighter, warmer, and so much more gentle just by being in it. Whether you are strumming a chord on your ukulele, carefully stitching love into every crochet project, or throwing down a strategic Wild card in UNO, you bring a quiet magic to every moment. You carry yourself with a grace that inspires me every single day to be braver, kinder, and more loving.</p>
+                    <p>They say it's nice to have a friend, but having you in my life is so much more than I could ever ask for. I truly pray that God blesses everyone with a friend as incredible as you, but I am endlessly thankful that I get to call you mine.</p>
+                    <p>I hope this 19th year brings you all the peace, joy, and beautiful memories you deserve. Never stop playing your own music, creating beautiful things, and being the extraordinary person you are.</p>
+                    <p class="signature">With all my love,<br>Yours, Vaishnavi</p>
+                </div>
+            </div>
         </section>
 
         <section class="quote-section gold reveal-block">
-            <p class="quote-mark">"I once believed love was burning red, but it's golden — like daylight. (From "Daylight")"</p>
+            <p class="quote-mark">"I once believed love was burning red, but it's golden — like daylight." (From "Daylight")</p>
             <p class="quote-credit">Because that is what your friendship feels like</p>
         </section>
 
